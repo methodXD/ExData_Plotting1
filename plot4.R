@@ -29,14 +29,17 @@ png(filename="plot4.png", width=480, height=480, bg="transparent")
 # Create plot with 2by2 array of 4 figures
 par(mfrow = c(2,2))
 
+# Create top-left figure
 plot(data2$Global_active_power ~ data2$DateTime,xlab="",
      ylab="Global Active Power",pch=NA)
     lines(data2$Global_active_power ~ data2$DateTime)
 
+# Create top-right figure
 plot(data2$Voltage ~ data2$DateTime,xlab="datetime",
      ylab="Voltage",pch=NA)
     lines(data2$Voltage ~ data2$DateTime)
 
+# Create bottom-left figure
 plot(data2$Sub_metering_1 ~ data2$DateTime,pch=NA,xlab="",
      ylab="Energy sub metering")
     lines(data2$Sub_metering_1 ~ data2$DateTime)
@@ -46,6 +49,7 @@ plot(data2$Sub_metering_1 ~ data2$DateTime,pch=NA,xlab="",
            legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
            lty="solid",bty="n")
 
+# Create bottom-right figure
 plot(data2$Global_reactive_power ~ data2$DateTime,xlab="datetime",
      ylab="Global_reactive_power",pch=NA)
     lines(data2$Global_reactive_power ~ data2$DateTime)
